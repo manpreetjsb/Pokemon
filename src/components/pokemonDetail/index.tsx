@@ -54,7 +54,7 @@ const PokemonDetailCom: React.FC<IPokemonDetail> = (props) => {
                 </a>
                 <Typography>
                   <b>Is Hidden : </b>
-                  {item.is_hidden}
+                  {String(item.is_hidden)}
                 </Typography>
                 <Typography>
                   <b>slot :</b> {item.slot}

@@ -1,13 +1,9 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import PokemonDetailCom from '.'
 
 const setup = () => {
-  const actions = {
-    toggleFilter: jest.fn(),
-  }
-
   const abilities = [
     {
       is_hidden: true,
@@ -77,10 +73,17 @@ const setup = () => {
 }
 
 describe('PokemonDetailCom', () => {
-  it('should show data', () => {
-    const { queryByRole } = setup()
-    expect(
-      queryByRole('button', { name: 'clear search' })
-    ).not.toBeInTheDocument()
+  it('should show a Name', () => {
+    const { queryByText } = setup()
+    expect(queryByText('charmander')).toBeInTheDocument()
+  })
+  it('should show a image', () => {
+    const { queryByText } = setup()
+    const displayedImage = document.querySelector('img') as HTMLImageElement
+    expect(displayedImage.src).toContain('4.png')
+  })
+  it('should show a is_hidden true', () => {
+    const { queryByText } = setup()
+    expect(queryByText('true')).toBeInTheDocument()
   })
 })
