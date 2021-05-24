@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
+import fetch from 'node-fetch'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -51,7 +52,7 @@ const PokemonList: React.FC = () => {
       <Grid container spacing={3}>
         <Grid item xs={4}>
           <Typography component='h5' variant='h5'>
-            Pokemon List{' '}
+            Pokemon List
             <TextField
               value={searchList}
               variant='outlined'
