@@ -28,7 +28,7 @@ const PokemonDetailCom: React.FC<IPokemonDetail> = (props) => {
         </Grid>
         <Grid container item xs={6} alignContent='center'>
           <Typography>
-            <b>Name :</b> {pokemonDetail.name}
+            <b>Name :</b> <p data-testid='pokemon-name'>{pokemonDetail.name}</p>
           </Typography>
         </Grid>
       </Grid>
