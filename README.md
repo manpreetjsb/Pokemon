@@ -1,12 +1,10 @@
-# Getting Started with Create React App
+# Pokemon React Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+May 2021
 
-## Available Scripts
+After clone In the project directory, you can run:
 
-In the project directory, you can run:
-
-### `npm start`
+### `npm i`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
