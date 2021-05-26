@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-
+import { IPokemonDetail } from '../../types'
 import PokemonDetailCom from '.'
 
 const abilities = [
@@ -64,7 +64,7 @@ export const DetailProp = {
   moves: moves,
 }
 
-const setup = (prop: any) => {
+const setup = (prop: IPokemonDetail) => {
   const utils = render(<PokemonDetailCom {...prop} />)
 
   return {
